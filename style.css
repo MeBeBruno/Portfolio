@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100vw;
+}
+
+.reveal {
+    width: 100vw;
+    height: 100vh;
+    background-color: #6432324d;
+    backdrop-filter: blur(15px);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: -100vh;
+    animation: reveal-slide 0.5s ease-in-out;
+}
+
+.reveal > span {
+    font-style: italic;
+    font-size: 3em;
+}
+
+@keyframes reveal-slide {
+    0% {
+        transform: translateY(100%);
+    }
+
+    50% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
