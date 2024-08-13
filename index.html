@@ -6,14 +6,22 @@
     <title>Bruno Runden</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body name="loading-and-style">
+<body>
     <div class="background"></div>
     <div class="background-filter"></div>
     <div class="reveal">
         <span>Welcome</span>
     </div>
-</body>
-<body name="content">
+
+    <div class="content">
+        <div class="segment">
+            <div id="intro">
+                <img src="#">
+                <h2>Bruno Runden</h2>
+            </div>
+        </div>
+    </div>
+
     <script>
         const contentArray = [
             "Hello, World!",
@@ -46,7 +54,9 @@
 
         contentElement.innerHTML = randomContent;
 
-        document.querySelector(".background").style.backgroundImage = "url('https://picsum.photos/" + window.screen.availWidth + "/" + window.screen.availHeight + "')";
+        document.querySelector(".background").style.backgroundImage = "url('https://picsum.photos/" + window.innerWidth + "/" + window.innerHeight + "')";
+
+        document.querySelector(".content").innerHTML = "<span class='overlay'><a href='https://picsum.photos/" + window.innerWidth + "/" + window.innerHeight + "' target='_blank'>https://picsum.photos/" + window.innerWidth + "/" + window.innerHeight + "</a></span>";
     </script>
 </body>
 </html>
