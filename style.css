@@ -172,7 +172,7 @@ span.overlay {
 
 .segment {
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     overflow: auto;
     display: flex;
     align-items: center;
