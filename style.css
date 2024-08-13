@@ -252,25 +252,25 @@ span.overlay {
 
     nav > .hitbox:hover {
         transform: scale(100%);
-        width: calc(max(10vh, 100px) * 0.9);
-        height: calc(max(10vh, 100px) * 0.9);
+        width: calc(max(10vh, 100px) * 1);
+        height: calc(max(10vh, 100px) * 1);
     }
 
     nav > .hitbox:hover + *,
     nav > .hitbox:has(+ *:hover) {
-        width: calc(max(10vh, 100px) * 0.9);
-        height: calc(max(10vh, 100px) * 0.9);
+        width: calc(max(10vh, 100px) * 1);
+        height: calc(max(10vh, 100px) * 1);
     }
 
     nav > .hitbox:hover + * + *,
     nav > .hitbox:has(+ * + *:hover) {
-        width: calc(max(10vh, 100px) * 0.9);
-        height: calc(max(10vh, 100px) * 0.9);
+        width: calc(max(10vh, 100px) * 1);
+        height: calc(max(10vh, 100px) * 1);
     }
 
     nav > .hitbox:hover + * + * + *,
     nav > .hitbox:has(+ * + * + *:hover) {
-        width: calc(max(10vh, 100px) * 0.9);
-        height: calc(max(10vh, 100px) * 0.9);
+        width: calc(max(10vh, 100px) * 1);
+        height: calc(max(10vh, 100px) * 1);
     }
 }
