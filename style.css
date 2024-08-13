@@ -251,7 +251,7 @@ span.overlay {
     }
 
     nav > .hitbox:hover {
-        transform: scale(150%);
+        transform: scale(105%);
         width: calc(max(10vh, 100px) * 0.9);
         height: calc(max(10vh, 100px) * 0.9);
     }
