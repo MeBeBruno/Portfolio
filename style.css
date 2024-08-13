@@ -36,7 +36,7 @@ nav {
     position: fixed;
     bottom: 0;
     margin-left: 50vw;
-    margin-bottom: 50px;
+    margin-bottom: 5vh;
     transform: translateX(-50%) scale(75%) translateY(25%);
     background-color: #00000044;
     backdrop-filter: blur(15px);
