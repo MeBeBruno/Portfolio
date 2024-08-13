@@ -4,12 +4,13 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
-html, body {
+html,
+body {
     height: 100vh;
 }
 
 a {
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 .background {
@@ -18,7 +19,7 @@ a {
     height: 100vh;
     width: 100vw;
     background-size: cover;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -32,7 +33,7 @@ a {
 span.overlay {
     position: relative;
     opacity: 1;
-    color: #fff;
+    color: rgb(255, 255, 255);
     position: fixed;
     margin-left: 50%;
     margin-bottom: 1vh;
@@ -47,16 +48,16 @@ span.overlay {
     height: 100vh;
     width: 100vw;
     background-color: rgb(127, 127, 127, 0.7);
-    backdrop-filter: blur(0.75vh);
+    backdrop-filter: blur(1vh);
     padding: 10px;
-    color: #fff;
+    color: rgb(255, 255, 255);
     z-index: 2;
 }
 
 .reveal {
     width: 100vw;
     height: 100vh;
-    background-color: #6432324d;
+    background-color: rgba(100, 50, 50, 0.3);
     backdrop-filter: blur(1vh);
     position: fixed;
     display: flex;
@@ -64,14 +65,15 @@ span.overlay {
     justify-content: space-evenly;
     animation: reveal-slide 1s ease-in-out;
     animation-fill-mode: forwards;
-    box-shadow: inset 0px 0px 50px 0px rgba(136,136,136,1);
+    box-shadow: inset 0px 0px 50px 0px rgba(136, 136, 136, 1);
     text-align: center;
     z-index: 5;
 }
 
-.reveal > span {
+.reveal>span {
+    font-family: 'Times New Roman', Times, serif;
     font-style: italic;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 3em;
 }
 
@@ -86,23 +88,49 @@ span.overlay {
 .segment {
     width: 100vw;
     height: 100vh;
+    overflow: auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
     z-index: 3;
 }
 
+.segment>#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(30, 30, 30, 0.25);
+    backdrop-filter: blur(1vh);
+    box-shadow: inset 0px 0px 50px 0px rgba(60, 60, 60, 0.5);
+    padding: 40px;
+    border-radius: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+}
+
+.segment>#intro>img {
+    width: 5em;
+}
+
+.segment>#intro>h2 {
+    background-color: rgba(255, 255, 255, 0.25);
+} 
+
 @keyframes reveal-slide {
     0% {
         transform: translateY(0%);
     }
+
     50% {
         transform: translateY(0%);
     }
+
     65% {
         transform: translateY(10%);
         opacity: 1;
     }
+
     100% {
         transform: translateY(-100%);
         opacity: 0;
@@ -113,6 +141,7 @@ span.overlay {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }

@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bruno Runden</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
 </head>
 <body>
     <div class="background"></div>
     <div class="background-filter"></div>
-    <div class="reveal">
-        <span>Welcome</span>
-    </div>
+    <div class="reveal"><span></span></div>
 
     <div class="content">
         <div class="segment">
             <div id="intro">
-                <img src="#">
+                <img src="assets/img/weckmann-cutout.png">
                 <h2>Bruno Runden</h2>
             </div>
         </div>
@@ -52,11 +51,15 @@
 
         const contentElement = document.querySelector('.reveal > span');
 
-        contentElement.innerHTML = randomContent;
+        contentElement.innerHTML += randomContent;
 
         document.querySelector(".background").style.backgroundImage = "url('https://picsum.photos/" + window.innerWidth + "/" + window.innerHeight + "')";
 
-        document.querySelector(".content").innerHTML = "<span class='overlay'><a href='https://picsum.photos/" + window.innerWidth + "/" + window.innerHeight + "' target='_blank'>https://picsum.photos/" + window.innerWidth + "/" + window.innerHeight + "</a></span>";
+        const overlayElement = document.createElement('span');
+        overlayElement.className = 'overlay';
+        overlayElement.innerHTML = "<a href='https://picsum.photos/" + window.innerWidth + "/" + window.innerHeight + "' target='_blank'>https://picsum.photos/" + window.innerWidth + "/" + window.innerHeight + "</a>";
+
+        document.querySelector(".content").appendChild(overlayElement);
     </script>
 </body>
 </html>
