@@ -30,6 +30,89 @@ a {
     z-index: 1;
 }
 
+nav {
+    position: fixed;
+    bottom: 0;
+    margin-left: 50vw;
+    margin-bottom: 50px;
+    transform: translateX(-50%) scale(75%) translateY(25%);
+    background-color: #00000044;
+    backdrop-filter: blur(15px);
+    width: auto;
+    max-width: 90vw;
+    height: max(10vh, 100px);
+    border-radius: max(10vh, 100px);
+    border: 1px solid #666;
+    display: flex;
+    justify-content: space-around;
+    align-items:end;
+    padding: 0 35px 0 35px;
+    opacity: 0.5;
+    transition: 0.2s;
+    z-index: 5;
+}
+
+nav:hover {
+    opacity: 1;
+    transform: translateX(-50%) scale(100%) translateY(0);
+}
+
+nav > .hitbox {
+    padding: 0 12.5px 0 12.5px;
+    height: calc(max(10vh, 100px) * 1);
+    width: calc(max(10vh, 100px) * 1);
+    transition: 0.2s;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav > .hitbox > a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav > .hitbox > a > .icon {
+    background-color: #111;
+    height: 90%;
+    width: 90%;
+    border-radius: calc(max(10vh, 100px) * 0.9);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.75);
+}
+
+
+nav > .hitbox:hover {
+    width: calc(max(10vh, 100px) * 1.7);
+    height: calc(max(10vh, 100px) * 1.7);
+}
+
+nav > .hitbox:hover + *, nav > .hitbox:has(+ *:hover) {
+    width: calc(max(10vh, 100px) * 1.35);
+    height: calc(max(10vh, 100px) * 1.35);
+}
+
+nav > .hitbox:hover + * + *, nav > .hitbox:has(+ * + *:hover) {
+    width: calc(max(10vh, 100px) * 1.1);
+    height: calc(max(10vh, 100px) * 1.1);
+}
+
+nav > .hitbox:hover + * + * + *, nav > .hitbox:has(+ * + * + *:hover) {
+    width: calc(max(10vh, 100px) * 1);
+    height: calc(max(10vh, 100px) * 1);
+}
+
+nav > .hitbox > a > .icon > svg {
+    width: calc(max(10vh, 100px) * 0.5);
+    height: calc(max(10vh, 100px) * 0.5);
+}
+
 span.overlay {
     position: relative;
     opacity: 1;
@@ -67,7 +150,7 @@ span.overlay {
     animation-fill-mode: forwards;
     box-shadow: inset 0px 0px 50px 0px rgba(136, 136, 136, 1);
     text-align: center;
-    z-index: 5;
+    z-index: 6;
 }
 
 .reveal>span {
