@@ -170,7 +170,7 @@ span.overlay {
 
 .segment {
     width: 100vw;
-    min-height: 50vh;
+    height: 100vh;
     overflow: auto;
     display: flex;
     align-items: center;
@@ -198,7 +198,6 @@ span.overlay {
 
 .segment>#intro>h2 {
     background-color: rgba(255, 255, 255, 0.25);
-    animation: text-bg-flicker 5s ease-in-out infinite;
 } 
 
 @keyframes reveal-slide {
@@ -228,19 +227,5 @@ span.overlay {
 
     100% {
         opacity: 1;
-    }
-}
-
-@keyframes text-bg-flicker {
-    0% {
-        background-color: rgba(255, 255, 255, 0.25);
-    }
-
-    50% {
-        background-color: rgba(255, 255, 255, 0);
-    }
-
-    100% {
-        background-color: rgba(255, 255, 255, 0.25);
     }
 }
