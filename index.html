@@ -6,9 +6,47 @@
     <title>Bruno Runden</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body name="loading-and-style">
+    <div class="background"></div>
+    <div class="background-filter"></div>
     <div class="reveal">
         <span>Welcome</span>
     </div>
+</body>
+<body name="content">
+    <script>
+        const contentArray = [
+            "Hello, World!",
+            "Welcome to my website!",
+            "Enjoy your stay!",
+            "Have a great day!",
+            "Explore and have fun!",
+            "Discover something new today!",
+            "Glad to see you here!",
+            "Your adventure starts here.",
+            "Take a look around!",
+            "Dive into the content!",
+            "Make yourself at home.",
+            "Ready to explore?",
+            "Hope you find what you’re looking for!",
+            "Thanks for stopping by!",
+            "Feel free to browse around.",
+            "Stay curious, stay inspired!",
+            "Unleash your creativity!",
+            "Embrace the journey!",
+            "The best is yet to come!",
+            "Welcome to the world of possibilities!",
+            "I'm Bruno and you are welcome!"
+        ];
+
+        const randomIndex = Math.floor(Math.random() * contentArray.length);
+        const randomContent = contentArray[randomIndex];
+
+        const contentElement = document.querySelector('.reveal > span');
+
+        contentElement.innerHTML = randomContent;
+
+        document.querySelector(".background").style.backgroundImage = "url('https://picsum.photos/" + window.screen.availWidth + "/" + window.screen.availHeight + "')";
+    </script>
 </body>
 </html>

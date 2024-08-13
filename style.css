@@ -4,7 +4,30 @@
 }
 
 html, body {
-    height: 100vw;
+    height: 100vh;    
+}
+
+.background {
+    position: fixed;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+    animation: reveal-background 0.5s ease-in-out;
+}
+
+.background-filter {
+    position: fixed;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(127, 127, 127, 0.7);
+    backdrop-filter: blur(10px);
 }
 
 .reveal {
@@ -16,25 +39,42 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: -100vh;
-    animation: reveal-slide 0.5s ease-in-out;
+    animation: reveal-slide 1s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .reveal > span {
     font-style: italic;
+    color: #fff;
     font-size: 3em;
 }
 
 @keyframes reveal-slide {
     0% {
-        transform: translateY(100%);
+        transform: translateY(0%);
     }
 
     50% {
-        transform: translateY(100%);
+        transform: translateY(0%);
+    }
+
+    65% {
+        transform: translateY(10%);
+        opacity: 1;
     }
 
     100% {
-        transform: translateY(0);
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes reveal-background {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
