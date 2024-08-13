@@ -22,7 +22,7 @@ a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    backdrop-filter: blur(1vw);
+    backdrop-filter: blur(0.75vh);
     opacity: 0;
     animation: reveal-background 2s ease-in-out;
     animation-fill-mode: forwards;
@@ -38,7 +38,7 @@ span.overlay {
     margin-bottom: 1vh;
     transform: translateX(-50%);
     bottom: 0;
-    font-size: 1vw;
+    font-size: 1.5vh;
 }
 
 .background-filter {
@@ -47,7 +47,7 @@ span.overlay {
     height: 100vh;
     width: 100vw;
     background-color: rgb(127, 127, 127, 0.7);
-    backdrop-filter: blur(1vw);
+    backdrop-filter: blur(0.75vh);
     padding: 10px;
     color: #fff;
     z-index: 2;
@@ -57,7 +57,7 @@ span.overlay {
     width: 100vw;
     height: 100vh;
     background-color: #6432324d;
-    backdrop-filter: blur(1.5vw);
+    backdrop-filter: blur(1vh);
     position: fixed;
     display: flex;
     align-items: center;
